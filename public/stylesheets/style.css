@@ -1,0 +1,116 @@
+body {
+  padding-left: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.plane {
+  margin: 20px auto;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.fuselage {
+  padding: 5px;	
+  border-top: 2px solid #d8d8d8;
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+
+.cockpit {
+  height: 220px; 
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 5px solid #d8d8d8;
+}
+.cockpit:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 400px;
+	width: 100%;
+	border-radius: 50%;
+	border-right: 5px solid #d8d8d8;
+	border-left: 5px solid #d8d8d8;
+}
+.payPoints{
+	top:250px;
+}
+.seatInfo{
+	padding: 10px;
+}
+.seat{
+	width:48px;
+}
+.seatGaps {
+	border-top:0px !important;
+	border-bottom:0px !important;
+	width:45px;
+	background-color: none;
+}
+.seatGaps:hover {
+	background-color: none;
+}
+.seatNumber {
+	position: absolute;
+    top: 94px;
+    left: 75px;
+    color:white;
+}
+.available {
+	background-color:#0099C9;
+}
+.available:hover {
+	background-color:#0099C9;
+}
+
+.unavailable{
+	background-color:#ccc;
+}
+.unavailable:hover{
+	background-color:#ccc;
+}
+
+.selected{
+	background-color:#47D3B0;
+}
+.selected:hover{
+	background-color:#47D3B0;
+}
+
+.seatsContainer{
+	margin-bottom: 5%;
+}
+
+.jumbotron{
+	background-color:white;
+}
+
+.firstClass{
+	margin-left: 3px;
+}
+.business{
+	margin-left: 3px;
+}
+.economy{
+	margin-left: 3px;
+}
+.firstClass .seatGaps{
+	width:250px;
+}
+.business .seatGaps{
+	width:155px;
+}
+.economy .seatGaps{
+	width:62px;
+}
+.priceInfo{
+	margin-left: -40px;
+    margin-top: 25px;
+}

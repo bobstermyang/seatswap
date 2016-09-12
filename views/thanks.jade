@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.container-fluid
+		.row
+			.col-md-12
+				.jumbotron
+					h2
+						| Payment Succesfull
+
+					p 
+						| Seat  
+						b
+							= seatNo
+						|   Confirmed 
+
+					a(href="/")
+						<- Go Back
+
+
+

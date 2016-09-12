@@ -1,0 +1,45 @@
+<div class="col-md-8 plane">
+	<div class="cockpit"></div>
+	<div class="fuselage">
+		<seat-picker seats="firstClass" on-selecting="nodeSelected(node)" class-name="firstClass"></seat-picker>
+		<seat-picker seats="business" on-selecting="nodeSelected(node)" class-name="business"></seat-picker>
+		<seat-picker seats="economy" on-selecting="nodeSelected(node)" class-name="economy"></seat-picker>
+	</div>	
+</div>
+<div class="col-md-4 payPoints" ng-if="doorOpen!='loading'">
+	<p ng-hide="!doorOpen"> Door Not Yet closed</p>
+	<button 
+		type="button" 
+		class="btn btn-lg btn-default" 
+		ng-if="selectedNodes.length>0"
+		ng-hide="doorOpen"
+		ng-click="rent()">
+		RENT
+	</button>
+	<h3 ng-if="selectedNodes.length>0">
+		${{20*selectedNodes.length}}/hour
+	</h3>
+	<p class="text-right">
+		{{points}} pts
+	</p>
+</div>
+<div class="progress col-md-4 payPoints" ng-if="doorOpen=='loading'">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width:99%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<ul class="nav nav-pills">
+			<li>
+				<a href='#/'>SEAT UPGRADE</a>
+			</li>
+			<li class="active">
+				<a href='#/rent'>RENT A SEAT</a>
+			</li>
+			<li class="disabled">
+				<a>DESTINATION</a>
+			</li>
+		</ul>
+	</div>
+</div>
